@@ -13,7 +13,7 @@ namespace LinkedList
             CustomLinkedList customLinkedList = new CustomLinkedList();
             customLinkedList.AddNode(56);
             customLinkedList.AddNode(30);
-            customLinkedList.AddNode(76);
+            customLinkedList.AddNode(70);
             Console.ReadLine();
         }
     }
