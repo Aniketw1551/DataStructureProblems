@@ -49,7 +49,7 @@ namespace LinkedList
                 }
             }
         }
-       
+
         public void AddFirstNode(int data)  //Method to Add Node at First in Linked List
         {
             Node newNode = new Node(data);
@@ -62,6 +62,28 @@ namespace LinkedList
         {
             AddLastNode(data);
             Console.WriteLine("{0} node Appended", data);
+        }
+        //Method to add Data in middle position
+        public Node AddingDataAtDesiredPosition(int position, int data)
+        {
+            Node newestNode = new Node(data);
+            if (this.head == null)
+            {
+                return newestNode;
+            }
+            //Node Exchange
+            Node prev = null;
+            Node current = this.head;
+            int count = 0;
+            while (current != null && count < position)
+            {
+                prev = current;
+                current = current.next;
+                count++;
+            }
+            newestNode.next = prev.next;
+            prev.next = newestNode;
+            return this.head;
         }
     }
 }
