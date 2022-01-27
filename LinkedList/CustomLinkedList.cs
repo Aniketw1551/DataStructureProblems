@@ -9,32 +9,53 @@ namespace LinkedList
     public class CustomLinkedList
     {
         public Node head;
-        //Method to Add Node in Linked List
-        public void AddNode(int data)
+        //Method to Add Node at Last in Linked List
+        public void AddLastNode(int data)
         {
             Node node = new Node(data);
-            
-            if (this.head == null) //condition to Check head and add first Node
+            //condition to Check head and add first Node
+            if (this.head == null)
             {
                 this.head = node;
             }
             else
             {
-                var lastNode = GetLastNode();
-                lastNode.next = node;
+                //Temp Node to work
+                Node temp = head;
+                //Looping 
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
             }
-            Console.WriteLine("Inserted into node: " + node.data);
         }
-        public Node GetLastNode()
+        //Display Method
+        public void DisplayLinkedList()
         {
-            //Temp Node to work
+            Console.WriteLine("Display nodes of Linked List");
             Node temp = head;
-            //Loop to check next pointer in Node
-            while (temp.next != null)
+            if (temp == null)
             {
-                temp = temp.next;
+                Console.WriteLine("Linked list is Empty");
+                return;
             }
-            return temp;
+            else
+            {
+                while (temp != null)
+                {
+                    Console.WriteLine("Nodes are: " + temp.data);
+                    temp = temp.next;
+                }
+            }
+        }
+        //Method to Add Node at First in Linked List
+        public void AddFirstNode(int data)
+        {
+            Node newNode = new Node(data);
+            newNode.next = head;
+            head = newNode;
+            Console.WriteLine("{0} : Nodes inserted in Linked list ", newNode.data);
         }
     }
 }

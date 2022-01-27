@@ -10,11 +10,24 @@ namespace LinkedList
     {
         static void Main(string[] args)
         {
-            CustomLinkedList customLinkedList = new CustomLinkedList();
-            customLinkedList.AddNode(56);
-            customLinkedList.AddNode(30);
-            customLinkedList.AddNode(70);
+            Program program = new Program();
+            program.LinkedListCall();
             Console.ReadLine();
+        }
+
+        public void LinkedListCall()
+        {
+            CustomLinkedList customLinkedList = new CustomLinkedList();
+            customLinkedList.AddLastNode(56);
+            customLinkedList.AddLastNode(30);
+            customLinkedList.AddLastNode(70);
+            Console.WriteLine("nodes inserted");
+            customLinkedList.DisplayLinkedList();
+
+            customLinkedList.AddFirstNode(70);
+            customLinkedList.AddFirstNode(30);
+            customLinkedList.AddFirstNode(56);
+            customLinkedList.DisplayLinkedList();
         }
     }
 }
