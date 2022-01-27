@@ -49,13 +49,19 @@ namespace LinkedList
                 }
             }
         }
-        //Method to Add Node at First in Linked List
-        public void AddFirstNode(int data)
+       
+        public void AddFirstNode(int data)  //Method to Add Node at First in Linked List
         {
             Node newNode = new Node(data);
             newNode.next = head;
             head = newNode;
             Console.WriteLine("{0} : Nodes inserted in Linked list ", newNode.data);
+        }
+
+        public void AppendLinkedList(int data)  //Method to Append Linked List
+        {
+            AddLastNode(data);
+            Console.WriteLine("{0} node Appended", data);
         }
     }
 }
