@@ -19,6 +19,7 @@ namespace LinkedList
         {
             CustomLinkedList customLinkedList = new CustomLinkedList();
             customLinkedList.AddLastNode(56);
+            customLinkedList.AddLastNode(30);
             customLinkedList.AddLastNode(70);
             customLinkedList.DisplayLinkedList();
             Console.WriteLine("---------------");
