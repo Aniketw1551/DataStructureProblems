@@ -23,9 +23,9 @@ namespace LinkedList
             customLinkedList.AddLastNode(70);
             customLinkedList.DisplayLinkedList();
             Console.WriteLine("---------------");
-            int dnode = customLinkedList.DeleteLastNode();
-            Console.WriteLine("{0} node deleted", dnode);
-            customLinkedList.DisplayLinkedList();
+            int snode = customLinkedList.SearchNode(30);
+            if (snode != 0)
+            Console.WriteLine("{0} node is present in the Linked List", snode);
         }
     }
 }
