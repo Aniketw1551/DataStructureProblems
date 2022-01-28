@@ -27,7 +27,11 @@ namespace LinkedList
                 tail = newNode;
             }
         }
+<<<<<<< HEAD
         //Method to sorts the Linked list in ascending order
+=======
+        //Method to Sort the Linked list in ascending order
+>>>>>>> UC10_SortedLinkedList
         public void SortedList()
         {
             SortedNode<T> current = head, index = null;
@@ -55,7 +59,11 @@ namespace LinkedList
                 }
             }
         }
+<<<<<<< HEAD
         //Method to display each node from Linked List
+=======
+        //Method to Display each node from Linked List
+>>>>>>> UC10_SortedLinkedList
         public void Display()
         {
             SortedNode<T> node = this.head;
