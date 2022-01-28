@@ -134,5 +134,33 @@ namespace LinkedList
             }
             return count;
         }
+        //Method to Delete a Node from particular position
+        public void DeleteAtDesiredPosition(int position)
+        {
+            Node temp = this.head;
+            for (int i = 0; temp != null && i < position - 1; i++)
+            {
+                temp = temp.next;
+            }
+            Node next = temp.next.next;
+            temp.next = next;
+        }
+        //Method to get size of a Linked List
+        public void Size()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Linked list is Empty");
+                return;
+            }
+            int count = 0;
+            Node temp = this.head;
+            while (temp != null)
+            {
+                temp = temp.next;
+                count++;
+            }
+            Console.WriteLine("Size of Linked List: " + count);
+        }
     }
 }
