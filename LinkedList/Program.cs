@@ -22,7 +22,8 @@ namespace LinkedList
             customLinkedList.AddLastNode(70);
             customLinkedList.DisplayLinkedList();
             Console.WriteLine("---------------");
-            customLinkedList.AddingDataAtDesiredPosition(1,30);
+            int dnode = customLinkedList.DeleteFirstNode();
+            Console.WriteLine("{0} node deleted", dnode);
             customLinkedList.DisplayLinkedList();
         }
     }
