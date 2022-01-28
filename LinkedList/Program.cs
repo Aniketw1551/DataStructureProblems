@@ -6,12 +6,17 @@ using System.Threading.Tasks;
 
 namespace LinkedList
 {
-    internal class Program
+    public class Program
     {
+        /// <summary>
+        /// Entry point
+        /// </summary>
+        /// <param name="args">The arguments.</param>
         static void Main(string[] args)
         {
             Program program = new Program();
-            program.LinkedListCall();
+            //program.LinkedListCall();
+            SortedLinkedListCall();
             Console.ReadLine();
         }
 
@@ -28,6 +33,21 @@ namespace LinkedList
             customLinkedList.DeleteAtDesiredPosition(key);
             customLinkedList.DisplayLinkedList();
             customLinkedList.Size();
+        }
+        //Sorted Linked List 
+        public static void SortedLinkedListCall()
+        {
+            SortedLinkedList<int> sortedLinkedList = new SortedLinkedList<int>();
+            Console.WriteLine("SortedLinkedList");
+            sortedLinkedList.Add(new SortedNode<int>(70));
+            sortedLinkedList.Add(new SortedNode<int>(40));
+            sortedLinkedList.Add(new SortedNode<int>(30));
+            sortedLinkedList.Add(new SortedNode<int>(56));
+            Console.WriteLine("LinkedList before sorting");
+            sortedLinkedList.Display();
+            sortedLinkedList.SortedList();
+            Console.WriteLine("LinkedList after sorting");
+            sortedLinkedList.Display();
         }
     }
 }
